@@ -1,0 +1,1 @@
+type  LongitudeLatitude=[number, number];

@@ -1,0 +1,1 @@
+export const gaoDeSdkApiKey = "9bf5743dd0550df69cb0843ceb12e6eb";

@@ -1,0 +1,21 @@
+{
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": 2,
+                "proposals": true
+            }
+        ],
+        [
+            "babel-plugin-root-import",
+            {
+                "rootPathSuffix": "./src/",
+                "rootPathPrefix": "@src/"
+            }
+        ],
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        "@babel/plugin-proposal-class-properties"
+    ],
+    "presets": ["@babel/preset-typescript", "@babel/preset-env"]
+} 

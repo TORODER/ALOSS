@@ -1,0 +1,13 @@
+
+# 目录
+node_modules/
+dist/
+/log/
+
+
+database/data/**/*
+database/log
+
+# 文件
+package-lock.json
+dump.rdb
