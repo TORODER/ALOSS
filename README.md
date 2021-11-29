@@ -6,16 +6,15 @@
 
 - 运行 `npm install-dep` 安装项目依赖
 
-- 安装 `mongodb` 运行 `npm run run-db` 启动数据库
+- 安装 `mongodb` `redis` 
 
-- 终端输入 `mongo --port 30000` 连接成功后输入 `rs.initiate()` 完成初始化
+- 运行 `npm run start-env` 启动数据库和Redis 日志将出现在 `${projectPath}/log/` 下
 
-- 运行 `npm run debug` 启动项目
+- 终端输入 `mongo --port 30000` 连接成功后输入 `rs.initiate()` 完成初始化 `mongodb`
+
+- 运行 `npm run make-run` 启动项目
 
 > 路径中有中文可能导致项目无法启动
-
-- 安装环境
-`shell sh ./shell/shell.sh`
 
 
 
