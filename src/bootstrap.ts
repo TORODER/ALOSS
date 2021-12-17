@@ -63,25 +63,25 @@ export async function bootstrap(
         // init emailer
         const emailer = initEmailer();
         // init session
-        const {handler:sessionHandler,store:sessionStore} = await initSession(options);
+        const { handler: sessionHandler, store: sessionStore } = await initSession(options);
         // init state
         const state = await initState();
         // init redis
         const redisClient = await initRedis();
         // bootstrap load plugin over
         // mixin to global 
-        globalPluginAgg = Object.assign(globalPluginAgg,{
+        globalPluginAgg = Object.assign(globalPluginAgg, {
             dbConn: dbConn,
             logger: mainLogger,
             emailer: emailer,
             sessionHandler: sessionHandler,
-            sessionStore:sessionStore,
+            sessionStore: sessionStore,
             state: state,
-            redis:redisClient,
+            redis: redisClient,
         });
     }
-    const bootstrapPlugin: BootstrapPlugin =  getGlobalPlugin();
-    
+    const bootstrapPlugin: BootstrapPlugin = getGlobalPlugin();
+
     // create express
     const app = express();
     const httpServer = http.createServer(app);

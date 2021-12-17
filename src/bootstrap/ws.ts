@@ -7,9 +7,6 @@ import { InitError } from "@src/class/error/init-error.class";
 import internal from "stream";
 import R from "ramda";
 
-
-
-
 declare global{
     interface SetupWsService{
         (upgrade:(callback:(client: WebSocket, request: IncomingMessage) => void)=>void,request:http.IncomingMessage,socket:internal.Duplex,head: Buffer,ws:WsServer):Promise<boolean>

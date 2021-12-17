@@ -28,8 +28,6 @@ import { LoginSession } from "@src/@types/session-data";
 const { dbConn, sessionStore, redis } = getGlobalPlugin();
 const redisAsync = createRedisAsyncTool(redis);
 
-
-
 interface inputSignUpStruct {
     email: string;
     passwd: string;
@@ -51,7 +49,6 @@ interface inputSelectOneEmailUser {
     email?: string;
     uuid?: string;
 }
-
 
 export const {
     service: signUpPost,
@@ -207,9 +204,9 @@ const {
                 return new HttpPackage({
                     code: HttpPackageCode.OK,
                     data: {
-                        email: data!.email,
-                        username: data!.username,
-                        uuid: data!.uuid,
+                        email: data.email,
+                        username: data.username,
+                        uuid: data.uuid,
                         headPortrait: data.headPortrait,
                     },
                 });
@@ -337,7 +334,7 @@ export const setup: SetupService = async function setup(app) {
 
     installRouter(app, [
         {
-            path: "/user",
+            path: "/user",  
             middleware: [parserJsoner],
             child: [
                 {
